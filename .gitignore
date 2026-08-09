@@ -1,0 +1,13 @@
+# Runtime
+logs/
+
+# Certbot / ACME
+certbot/
+
+# Secrets / local overrides
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
