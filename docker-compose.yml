@@ -1,7 +1,7 @@
 services:
   reverse-proxy:
     build: .
-    container_name: reverse-proxy
+    container_name: reverse-proxy-prod
 
     ports:
       - "80:80"
