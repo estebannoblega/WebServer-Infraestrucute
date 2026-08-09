@@ -13,15 +13,18 @@ Infraestructura web basada en Docker y NGINX.
 
 ## Estructura
 
-/opt/webserver
+```text
+/opt/webserver/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── conf/
 │   ├── nginx.conf
 │   ├── sites/
 │   └── snippets/
-└── sites/
-
+├── sites/
+├── certbot/
+└── logs/
+```
 ## Operación
 
 Validar configuración:
