@@ -38,3 +38,26 @@ docker exec reverse-proxy-prod nginx -s reload
 Ver estado:
 
 docker compose ps
+
+## Como agregar una nueva web estática
+
+1. Crear el directorio:
+   sites/nueva-web/
+
+2. Agregar los archivos de la web.
+
+3. Crear su configuración:
+   conf/sites/nueva-web.conf
+
+4. Validar NGINX:
+   docker exec reverse-proxy-prod nginx -t
+
+5. Recargar NGINX:
+   docker exec reverse-proxy-prod nginx -s reload
+
+6. Probar el sitio.
+
+7. Versionar:
+   git add .
+   git commit -m "feat: add nueva-web"
+   git push
