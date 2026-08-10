@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Esteban Nóblega - Ingeniero en Computación</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --accent: #38bdf8;
+      --text: #e2e8f0;
+      --subtext: #94a3b8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom: 1px solid #1e293b;
+      background: linear-gradient(to right, #0f172a, #111827);
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: var(--subtext);
+      font-size: 1.1rem;
+      margin-top: 5px;
+    }
+
+    .hero-badges {
+      margin-top: 25px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      margin: 5px;
+      border-radius: 8px;
+      background: rgba(56,189,248,0.1);
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 18px;
+      transition: 0.3s;
+      border: 1px solid transparent;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    .card h2 {
+      color: var(--accent);
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+
+    .card p,
+    .card li {
+      color: var(--subtext);
+      line-height: 1.7;
+      font-size: 0.96rem;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #1e293b;
+      color: var(--subtext);
+      font-size: 0.85rem;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Esteban Nóblega</h1>
+
+    <p>
+      Ingeniero en Computación · Networking · SysAdmin · Infraestructura IT
+    </p>
+
+    <p>
+      Universidad Nacional de Tucumán · Graduado 2025
+    </p>
+
+    <div class="hero-badges">
+      <span class="badge">Ingeniería</span>
+      <span class="badge">Linux</span>
+      <span class="badge">Proxmox</span>
+      <span class="badge">BGP</span>
+      <span class="badge">OSPF</span>
+      <span class="badge">Docker</span>
+      <span class="badge">Datacenter</span>
+      <span class="badge">DNS</span>
+      <span class="badge">Kubernetes</span>
+      <span class="badge">Networking</span>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>👨‍💻 Perfil Profesional</h2>
+
+      <p>
+        Ingeniero en Computación graduado en la Universidad Nacional de Tucumán,
+        con experiencia en administración de infraestructura IT,
+        operación de NOC, networking y entornos Linux.
+      </p>
+
+      <br>
+
+      <p>
+        Especializado en troubleshooting de redes y servicios críticos,
+        virtualización de infraestructura y administración de entornos
+        productivos orientados a alta disponibilidad.
+      </p>
+
+      <br>
+
+      <p>
+        Perfil técnico orientado a la resolución de problemas complejos,
+        optimización de infraestructura y liderazgo operativo de equipos técnicos.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🌐 Networking & NOC</h2>
+
+      <ul>
+        <li>Administración y troubleshooting de redes LAN, WAN y MAN.</li>
+        <li>Conocimiento avanzado de protocolos TCP/IP y UDP.</li>
+        <li>Configuración y análisis de routing dinámico.</li>
+        <li>Experiencia trabajando con BGP y OSPF.</li>
+        <li>Diagnóstico de problemas de conectividad y performance.</li>
+        <li>Administración de VLANs y enlaces troncales.</li>
+        <li>Monitoreo de infraestructura y análisis de tráfico.</li>
+        <li>Experiencia en entornos ISP y operación NOC.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🖥️ SysAdmin & Datacenter</h2>
+
+      <ul>
+        <li>Administración de servidores Linux.</li>
+        <li>Virtualización con Proxmox VE.</li>
+        <li>Configuración de storages y clústeres virtualizados.</li>
+        <li>Creación, migración y mantenimiento de máquinas virtuales.</li>
+        <li>Despliegue y administración de servicios críticos.</li>
+        <li>Administración de Docker y NGINX.</li>
+        <li>Automatización y optimización de infraestructura.</li>
+        <li>Administración y operación de datacenter.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🔌 Infraestructura Física</h2>
+
+      <ul>
+        <li>Cableado estructurado y organización de racks.</li>
+        <li>Implementación y mantenimiento de fibra óptica.</li>
+        <li>Instalación de equipamiento de red.</li>
+        <li>Diagnóstico y resolución de fallas físicas y lógicas.</li>
+        <li>Mantenimiento preventivo y correctivo de infraestructura.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>👥 Liderazgo & Gestión</h2>
+
+      <ul>
+        <li>Coordinación de equipos técnicos y operativos.</li>
+        <li>Delegación y seguimiento de tareas.</li>
+        <li>Capacitación de personal técnico.</li>
+        <li>Gestión de incidentes y escalamiento.</li>
+        <li>Planificación operativa y resolución de contingencias.</li>
+        <li>Toma de decisiones en entornos críticos.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>⚙️ Tecnologías</h2>
+
+      <span class="badge">Linux</span>
+      <span class="badge">Debian</span>
+      <span class="badge">Ubuntu</span>
+      <span class="badge">Proxmox</span>
+      <span class="badge">Docker</span>
+      <span class="badge">NGINX</span>
+      <span class="badge">BGP</span>
+      <span class="badge">OSPF</span>
+      <span class="badge">TCP/IP</span>
+      <span class="badge">Virtualización</span>
+      <span class="badge">Datacenter</span>
+      <span class="badge">Networking</span>
+      <span class="badge">Troubleshooting</span>
+      <span class="badge">Mikrotik</span>
+      <span class="badge">Infraestructura IT</span>
+    </div>
+
+  </div>
+
+  <footer>
+    Esteban Noblega · Ingeniero en Computación · Universidad Nacional de Tucumán · 2026
+  </footer>
+
+</body>
+</html>
