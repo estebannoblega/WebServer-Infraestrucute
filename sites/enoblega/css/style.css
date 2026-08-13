@@ -1,0 +1,779 @@
+/* =========================================================
+   enoblega.com.ar
+   Terminal Portfolio
+   ========================================================= */
+
+:root {
+    --bg: #060b14;
+    --grid: rgba(80, 125, 180, 0.075);
+
+    --terminal-bg: #080e18;
+    --terminal-header: #111927;
+    --border: #25364e;
+
+    --cyan: #63f3ff;
+    --cyan-soft: #43cbd6;
+
+    --white-soft: #d7e7ed;
+    --gray: #718198;
+    --gray-dark: #46566d;
+
+    --error: #ff6b6b;
+    --green: #51d88a;
+    --yellow: #ffd166;
+
+    --shadow: rgba(0, 0, 0, 0.55);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 32px;
+
+    background-color: var(--bg);
+
+    background-image:
+        linear-gradient(
+            var(--grid) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            var(--grid) 1px,
+            transparent 1px
+        );
+
+    background-size: 32px 32px;
+
+    color: var(--cyan);
+
+    font-family:
+        "SFMono-Regular",
+        "Cascadia Code",
+        "Roboto Mono",
+        "Liberation Mono",
+        Menlo,
+        Consolas,
+        monospace;
+}
+
+
+/* =========================================================
+   TERMINAL WINDOW
+   ========================================================= */
+
+.terminal-window {
+    width: min(1180px, 100%);
+    height: min(760px, calc(100vh - 64px));
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background: var(--terminal-bg);
+
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    box-shadow:
+        0 30px 80px var(--shadow),
+        0 0 0 1px rgba(255, 255, 255, 0.01);
+}
+
+
+/* =========================================================
+   TERMINAL HEADER
+   ========================================================= */
+
+.terminal-header {
+    flex: 0 0 54px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 18px;
+
+    background: var(--terminal-header);
+
+    border-bottom: 1px solid var(--border);
+
+    position: relative;
+}
+
+
+/* Traffic lights */
+
+.traffic-lights {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.traffic-light {
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+}
+
+.traffic-light.close {
+    background: #ff4d4f;
+}
+
+.traffic-light.minimize {
+    background: #ffb020;
+}
+
+.traffic-light.maximize {
+    background: #25c76f;
+}
+
+
+/* Window title */
+
+.terminal-title {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: var(--gray);
+
+    font-size: 12px;
+
+    user-select: none;
+}
+
+
+/* =========================================================
+   TERMINAL BODY
+   ========================================================= */
+
+.terminal-body {
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 28px 26px 40px;
+
+    font-size: 14px;
+    line-height: 1.65;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-dark) transparent;
+}
+
+
+/* Chrome scrollbar */
+
+.terminal-body::-webkit-scrollbar {
+    width: 7px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+    background: var(--gray-dark);
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   PROMPT / COMMAND
+   ========================================================= */
+
+.terminal-input-line,
+.terminal-line {
+    display: flex;
+    align-items: baseline;
+
+    gap: 10px;
+
+    min-height: 23px;
+}
+
+.prompt {
+    flex: 0 0 auto;
+
+    color: var(--cyan);
+
+    font-weight: 700;
+}
+
+.command {
+    color: var(--cyan);
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   REAL TERMINAL INPUT
+   ========================================================= */
+
+/*
+ * Important:
+ * The browser's native input was making the terminal
+ * look like a normal web form.
+ */
+
+.terminal-input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 0;
+    margin: 0;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: var(--cyan);
+
+    font: inherit;
+    font-weight: 600;
+
+    caret-color: var(--cyan);
+}
+
+.terminal-input:focus {
+    outline: none;
+}
+
+
+/* =========================================================
+   OUTPUT
+   ========================================================= */
+
+.terminal-output,
+.terminal-command-output {
+    color: var(--cyan);
+}
+
+.terminal-output {
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   WELCOME
+   ========================================================= */
+
+.welcome-output {
+    color: var(--cyan);
+
+    margin-bottom: 3px;
+}
+
+.welcome-output strong {
+    font-weight: 700;
+}
+
+.highlight {
+    color: var(--white-soft);
+}
+
+
+/* =========================================================
+   SPACING
+   ========================================================= */
+
+.terminal-spacer {
+    height: 18px;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.command-section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    margin-bottom: 7px;
+
+    color: var(--white-soft);
+
+    font-weight: 700;
+}
+
+.secondary-title {
+    margin-top: 22px;
+}
+
+.subsection-title {
+    margin-top: 16px;
+    margin-bottom: 5px;
+
+    color: var(--white-soft);
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+.command-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.command-list-item {
+    display: flex;
+
+    gap: 10px;
+
+    color: var(--cyan);
+}
+
+.list-marker {
+    color: var(--gray);
+
+    user-select: none;
+}
+
+.command-name {
+    min-width: 170px;
+
+    color: var(--white-soft);
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.profile-name {
+    color: var(--white-soft);
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.profile-title {
+    margin-top: 2px;
+
+    color: var(--cyan-soft);
+}
+
+.profile-role {
+    color: var(--cyan);
+}
+
+.profile-location {
+    color: var(--gray);
+}
+
+.profile-output p {
+    max-width: 900px;
+
+    margin: 8px 0;
+
+    color: var(--cyan);
+}
+
+.output-divider {
+    width: 100%;
+    max-width: 900px;
+
+    height: 1px;
+
+    margin: 14px 0;
+
+    background: var(--border);
+}
+
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.skill-category {
+    margin-bottom: 16px;
+}
+
+.skill-category .section-title {
+    color: var(--white-soft);
+}
+
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
+
+.experience-item {
+    max-width: 950px;
+
+    margin-bottom: 32px;
+
+    padding-left: 15px;
+
+    border-left: 2px solid var(--border);
+}
+
+.experience-period {
+    color: var(--gray);
+
+    font-size: 12px;
+}
+
+.experience-role {
+    margin-top: 3px;
+
+    color: var(--white-soft);
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.experience-company {
+    color: var(--cyan-soft);
+}
+
+.experience-item p {
+    color: var(--cyan);
+}
+
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+
+.project-item,
+.project-detail {
+    max-width: 950px;
+
+    margin-bottom: 24px;
+}
+
+.project-id {
+    color: var(--gray);
+
+    font-size: 12px;
+}
+
+.project-name {
+    margin-top: 2px;
+
+    color: var(--white-soft);
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.project-technologies {
+    margin-top: 2px;
+
+    color: var(--cyan-soft);
+
+    font-size: 12px;
+}
+
+.project-item p,
+.project-detail p {
+    max-width: 850px;
+
+    color: var(--cyan);
+}
+
+.project-command-hint {
+    color: var(--gray);
+}
+
+.project-command-hint span {
+    color: var(--white-soft);
+}
+
+
+/* =========================================================
+   REPOSITORIES / LINKS
+   ========================================================= */
+
+.repository-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.repository-item {
+    display: flex;
+    align-items: baseline;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+.repository-item a {
+    color: var(--cyan);
+
+    text-decoration: none;
+
+    transition: color 0.15s ease;
+}
+
+.repository-item a:hover {
+    color: var(--white-soft);
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   EDUCATION
+   ========================================================= */
+
+.education-item {
+    max-width: 900px;
+
+    margin-bottom: 22px;
+}
+
+.education-period {
+    color: var(--gray);
+
+    font-size: 12px;
+}
+
+.education-title {
+    margin-top: 2px;
+
+    color: var(--white-soft);
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.education-institution {
+    color: var(--cyan-soft);
+}
+
+.education-faculty {
+    color: var(--gray);
+}
+
+
+/* =========================================================
+   COURSES
+   ========================================================= */
+
+.course-item,
+.course-detail {
+    max-width: 900px;
+
+    margin-bottom: 22px;
+}
+
+.course-year {
+    color: var(--gray);
+
+    font-size: 12px;
+}
+
+.course-name {
+    margin-top: 2px;
+
+    color: var(--white-soft);
+
+    font-weight: 700;
+}
+
+.course-institution {
+    color: var(--cyan-soft);
+}
+
+.course-duration {
+    color: var(--gray);
+}
+
+.course-command-hint,
+.course-info {
+    margin-top: 5px;
+
+    color: var(--gray);
+}
+
+.course-command-hint span,
+.course-info span {
+    color: var(--white-soft);
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact-label {
+    margin-bottom: 4px;
+
+    color: var(--gray);
+}
+
+.contact-output a {
+    color: var(--cyan);
+
+    text-decoration: none;
+}
+
+.contact-output a:hover {
+    color: var(--white-soft);
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   SYSTEM OUTPUT
+   ========================================================= */
+
+.system-output {
+    color: var(--cyan);
+}
+
+.history-line {
+    display: flex;
+
+    gap: 15px;
+}
+
+.history-number {
+    width: 30px;
+
+    color: var(--gray);
+
+    text-align: right;
+}
+
+.autocomplete-output {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    color: var(--white-soft);
+}
+
+
+/* =========================================================
+   ERRORS
+   ========================================================= */
+
+.error-output {
+    color: var(--error);
+}
+
+.error-output span {
+    color: var(--white-soft);
+}
+
+.sudo-output {
+    color: var(--yellow);
+}
+
+
+/* =========================================================
+   CURSOR
+   ========================================================= */
+
+.cursor {
+    display: inline-block;
+
+    width: 8px;
+    height: 17px;
+
+    margin-left: 4px;
+
+    vertical-align: -3px;
+
+    background: var(--cyan);
+
+    animation: cursor-blink 1s steps(1, end) infinite;
+}
+
+@keyframes cursor-blink {
+    0%,
+    49% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 10px;
+
+        align-items: stretch;
+    }
+
+    .terminal-window {
+        width: 100%;
+        height: calc(100vh - 20px);
+
+        border-radius: 12px;
+    }
+
+    .terminal-header {
+        flex-basis: 48px;
+    }
+
+    .terminal-title {
+        display: none;
+    }
+
+    .terminal-body {
+        padding: 22px 15px 30px;
+
+        font-size: 13px;
+    }
+
+    .command-name {
+        min-width: 130px;
+    }
+
+    .experience-item {
+        padding-left: 10px;
+    }
+}
