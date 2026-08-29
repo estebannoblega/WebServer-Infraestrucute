@@ -11,3 +11,6 @@ certbot/
 # OS
 .DS_Store
 Thumbs.db
+
+# Docs/Resume
+enoblega-landing-page-plan.md

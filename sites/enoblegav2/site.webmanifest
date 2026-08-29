@@ -1,0 +1,16 @@
+{
+  "name": "Esteban Nóblega — Infrastructure Engineer",
+  "short_name": "enoblega",
+  "description": "Portfolio técnico de Esteban Nóblega — infraestructura, networking y sistemas.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060b14",
+  "theme_color": "#060b14",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

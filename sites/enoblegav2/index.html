@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esteban Nóblega | Infrastructure Engineer · Linux SysAdmin</title>
+    <meta name="description" content="Portfolio técnico de Esteban Nóblega — Ingeniero en Computación orientado a infraestructura, networking, Linux, SysAdmin y monitoreo de infraestructura crítica.">
+    <meta name="author" content="Esteban Leonel Nóblega Caro">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#060b14">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:site_name" content="enoblega.com.ar">
+    <meta property="og:title" content="Esteban Nóblega | Infrastructure Engineer">
+    <meta property="og:description" content="Ingeniero en Computación orientado a infraestructura, networking y sistemas. Terminal interactiva + landing profesional.">
+    <meta property="og:url" content="https://enoblega.com.ar/">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar" aria-label="Navegación principal">
+        <div class="navbar-inner">
+            <a class="navbar-brand" href="#top">
+                <span class="navbar-prompt">$</span>
+                esteban@enoblega
+            </a>
+
+            <button
+                class="navbar-toggle"
+                aria-label="Abrir menú de navegación"
+                aria-expanded="false"
+                aria-controls="navbar-links"
+            >
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="navbar-links" id="navbar-links">
+                <li><a href="#about">about</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#experience">experience</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#education">education</a></li>
+                <li><a href="#courses">courses</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="top">
+
+        <!-- ===================== HERO / TERMINAL ===================== -->
+        <section class="hero" aria-label="Presentación">
+            <div class="terminal-window" aria-label="Terminal personal de Esteban Nóblega">
+
+                <header class="terminal-header">
+                    <div class="traffic-lights" aria-hidden="true">
+                        <span class="traffic-light close"></span>
+                        <span class="traffic-light minimize"></span>
+                        <span class="traffic-light maximize"></span>
+                    </div>
+                    <div class="terminal-title">esteban@enoblega: ~</div>
+                </header>
+
+                <section class="terminal-body"></section>
+
+            </div>
+        </section>
+
+        <!-- ===================== LANDING SECTIONS ===================== -->
+        <div class="landing">
+
+            <section id="about" class="landing-section">
+                <h2 class="landing-title"><span class="landing-prompt">$</span> whoami</h2>
+                <div class="landing-body about-body"></div>
+            </section>
+
+            <section id="skills" class="landing-section">
+                <h2 class="landing-title"><span class="landing-prompt">$</span> skills</h2>
+                <div class="landing-body skills-body"></div>
+            </section>
+
+            <section id="experience" class="landing-section">
+                <h2 class="landing-title"><span class="landing-prompt">$</span> experience</h2>
+                <div class="landing-body experience-body"></div>
+            </section>
+
+            <section id="projects" class="landing-section">
+                <h2 class="landing-title"><span class="landing-prompt">$</span> projects</h2>
+                <div class="landing-body projects-body"></div>
+            </section>
+
+            <section id="education" class="landing-section">
+                <h2 class="landing-title"><span class="landing-prompt">$</span> education</h2>
+                <div class="landing-body education-body"></div>
+            </section>
+
+            <section id="courses" class="landing-section">
+                <h2 class="landing-title"><span class="landing-prompt">$</span> courses</h2>
+                <div class="landing-body courses-body"></div>
+            </section>
+
+            <section id="contact" class="landing-section">
+                <h2 class="landing-title"><span class="landing-prompt">$</span> contact</h2>
+                <div class="landing-body contact-body"></div>
+            </section>
+
+        </div>
+
+        <footer class="site-footer">
+            <span>esteban@enoblega.com.ar</span>
+            <span class="footer-dot">·</span>
+            <span>&copy; <span id="year"></span> Esteban Nóblega</span>
+        </footer>
+
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/commands.js"></script>
+    <script src="js/landing.js"></script>
+    <script src="js/terminal.js"></script>
+</body>
+</html>

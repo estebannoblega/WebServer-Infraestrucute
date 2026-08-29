@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://enoblega.com.ar/sitemap.xml
