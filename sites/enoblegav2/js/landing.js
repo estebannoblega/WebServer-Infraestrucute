@@ -87,7 +87,7 @@ function renderExperience() {
             <div class="experience-company">${esc(job.company)}</div>
             <p>${esc(job.description)}</p>
 
-            <div class="subsection-title">Responsibilities</div>
+            <div class="subsection-title">Responsabilidades</div>
             <div class="command-list">
                 ${job.responsibilities.map(item => `
                     <div class="command-list-item">
@@ -97,7 +97,7 @@ function renderExperience() {
                 `).join("")}
             </div>
 
-            <div class="subsection-title">Environment</div>
+            <div class="subsection-title">Entorno</div>
             <div class="experience-env">
                 ${job.environment.map(item =>
                     `<span class="experience-env-tag">${esc(item)}</span>`

@@ -68,10 +68,10 @@ document.addEventListener("DOMContentLoaded", () => {
         output.className = "terminal-output welcome-output";
 
         output.innerHTML = `
-            <div>Welcome to <strong>enoblega.com.ar</strong></div>
-            <div>Personal infrastructure portfolio</div>
+            <div>Bienvenido a <strong>enoblega.com.ar</strong></div>
+            <div>Portfolio personal de infraestructura</div>
             <br>
-            <div>Type <span class="highlight">'help'</span> to see available commands.</div>
+            <div>Escribí <span class="highlight">'help'</span> para ver los comandos disponibles.</div>
         `;
 
         terminalBody.appendChild(output);
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 autocorrect="off"
                 autocapitalize="off"
                 spellcheck="false"
-                aria-label="Terminal input"
+                aria-label="Entrada de la terminal"
             >
         `;
 
@@ -262,7 +262,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             printOutput(`
                 <div class="error-output">
-                    Error executing command.
+                    Error al ejecutar el comando.
                 </div>
             `);
 
@@ -370,7 +370,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             printOutput(`
                 <div class="system-output">
-                    No commands in history.
+                    No hay comandos en el historial.
                 </div>
             `);
 

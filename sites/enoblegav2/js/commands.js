@@ -53,81 +53,81 @@ function listItems(items) {
 function commandHelp() {
     return `
         <div class="help-command">
-            <div class="section-title">Available commands</div>
+            <div class="section-title">Comandos disponibles</div>
 
             <div class="command-list">
                 <div class="command-list-item">
                     <span class="command-name">whoami</span>
-                    <span>About me</span>
+                    <span>Sobre mí</span>
                 </div>
 
                 <div class="command-list-item">
                     <span class="command-name">skills</span>
-                    <span>Technical skills</span>
+                    <span>Habilidades técnicas</span>
                 </div>
 
                 <div class="command-list-item">
                     <span class="command-name">experience</span>
-                    <span>Work experience</span>
+                    <span>Experiencia laboral</span>
                 </div>
 
                 <div class="command-list-item">
                     <span class="command-name">projects</span>
-                    <span>Selected projects</span>
+                    <span>Proyectos destacados</span>
                 </div>
 
                 <div class="command-list-item">
                     <span class="command-name">project &lt;id&gt;</span>
-                    <span>Project details</span>
+                    <span>Detalle de un proyecto</span>
                 </div>
 
                 <div class="command-list-item">
                     <span class="command-name">education</span>
-                    <span>Academic background</span>
+                    <span>Formación académica</span>
                 </div>
 
                 <div class="command-list-item">
                     <span class="command-name">courses</span>
-                    <span>Courses and training</span>
+                    <span>Cursos y capacitaciones</span>
                 </div>
 
                 <div class="command-list-item">
                     <span class="command-name">contact</span>
-                    <span>Contact information</span>
+                    <span>Datos de contacto</span>
                 </div>
 
                 <div class="command-list-item">
                     <span class="command-name">clear</span>
-                    <span>Clear terminal</span>
+                    <span>Limpiar la terminal</span>
                 </div>
             </div>
 
-            <div class="section-title secondary-title">System commands</div>
+            <div class="section-title secondary-title">Comandos del sistema</div>
 
             <div class="command-list">
                 <div class="command-list-item">
                     <span class="command-name">ls</span>
-                    <span>List available sections</span>
+                    <span>Listar secciones disponibles</span>
                 </div>
 
                 <div class="command-list-item">
                     <span class="command-name">pwd</span>
-                    <span>Show current directory</span>
+                    <span>Mostrar el directorio actual</span>
                 </div>
 
                 <div class="command-list-item">
                     <span class="command-name">uname</span>
-                    <span>Show system information</span>
+                    <span>Mostrar información del sistema</span>
                 </div>
 
                 <div class="command-list-item">
                     <span class="command-name">uptime</span>
-                    <span>Show system uptime</span>
+                    <span>Mostrar el tiempo de actividad</span>
                 </div>
 
                 <div class="command-list-item">
                     <span class="command-name">history</span>
-                    <span>Show command history</span>
+                    <span>Mostrar el historial de comandos</span>
                 </div>
             </div>
         </div>
@@ -224,13 +224,13 @@ function commandExperience() {
                     </p>
 
                     <div class="subsection-title">
-                        Responsibilities
+                        Responsabilidades
                     </div>
 
                     ${listItems(job.responsibilities)}
 
                     <div class="subsection-title">
-                        Environment
+                        Entorno
                     </div>
 
                     ${listItems(job.environment)}
@@ -273,7 +273,7 @@ function commandProjects() {
                     </p>
 
                     <div class="project-command-hint">
-                        Use:
+                        Usá:
                         <span>project ${escapeHtml(project.id)}</span>
                     </div>
 
@@ -299,11 +299,11 @@ function commandProject(id) {
     if (!project) {
         return `
             <div class="error-output">
-                Project not found: ${escapeHtml(id)}
+                Proyecto no encontrado: ${escapeHtml(id)}
 
                 <br><br>
 
-                Available projects:
+                Proyectos disponibles:
                 <br>
                 ${projects.map(item =>
                     `project ${escapeHtml(item.id)}`
@@ -342,7 +342,7 @@ function commandProject(id) {
     if (project.details) {
         output += `
             <div class="subsection-title">
-                Details
+                Detalles
             </div>
 
             ${listItems(project.details)}
@@ -355,7 +355,7 @@ function commandProject(id) {
     if (project.implementations) {
         output += `
             <div class="subsection-title">
-                Implementations
+                Implementaciones
             </div>
 
             <div class="repository-list">
@@ -388,7 +388,7 @@ function commandProject(id) {
     if (project.repository) {
         output += `
             <div class="subsection-title">
-                Repository
+                Repositorio
             </div>
 
             <div class="repository-item">
@@ -411,7 +411,7 @@ function commandProject(id) {
     if (project.demo) {
         output += `
             <div class="subsection-title">
-                Live demo
+                Demo en vivo
             </div>
 
             <div class="repository-item">
@@ -497,22 +497,22 @@ function commandCourses() {
 
                     ${course.duration ? `
                         <div class="course-duration">
-                            Duration: ${escapeHtml(course.duration)}
+                            Duración: ${escapeHtml(course.duration)}
                         </div>
                     ` : ""}
 
                     <div class="course-command-hint">
                         ${course.certificate
-                            ? "Certificate available"
-                            : "Course"}
+                            ? "Certificado disponible"
+                            : "Curso"}
                     </div>
 
                 </article>
             `).join("")}
 
             <div class="course-info">
-                Use <span>courses --details</span>
-                to display certificate information.
+                Usá <span>courses --details</span>
+                para ver la información de los certificados.
             </div>
 
         </div>
@@ -552,14 +552,14 @@ function commandCoursesDetails() {
 
                     ${course.duration ? `
                         <div>
-                            Duration:
+                            Duración:
                             ${escapeHtml(course.duration)}
                         </div>
                     ` : ""}
 
                     ${course.certificateId ? `
                         <div>
-                            Certificate ID:
+                            ID de certificado:
                             ${escapeHtml(course.certificateId)}
                         </div>
                     ` : ""}
@@ -573,7 +573,7 @@ function commandCoursesDetails() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                Verify certificate
+                                Verificar certificado
                             </a>
                         </div>
                     ` : ""}
@@ -659,7 +659,7 @@ function commandUname() {
 function commandUptime() {
     return `
         <div class="system-output">
-            portfolio online · learning infrastructure 24/7
+            portfolio online · aprendiendo infraestructura 24/7
         </div>
     `;
 }
@@ -672,7 +672,7 @@ function commandUptime() {
 function commandSudo() {
     return `
         <div class="system-output sudo-output">
-            Nice try. 😉
+            Buen intento. 😉
         </div>
     `;
 }
@@ -689,7 +689,7 @@ function commandNotFound(command) {
 
             <br><br>
 
-            Type <span>'help'</span> to see available commands.
+            Escribí <span>'help'</span> para ver los comandos disponibles.
         </div>
     `;
 }

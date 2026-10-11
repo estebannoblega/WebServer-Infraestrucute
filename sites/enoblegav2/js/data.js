@@ -22,11 +22,11 @@ const profile = {
 
     focus: [
         "Networking",
-        "ISP Infrastructure",
-        "Systems Administration",
-        "Datacenter & Virtualization",
-        "Monitoring",
-        "Infrastructure"
+        "Infraestructura ISP",
+        "Administración de sistemas",
+        "Datacenter y virtualización",
+        "Monitoreo",
+        "Infraestructura"
     ]
 };
 
@@ -38,9 +38,9 @@ const skills = {
             "BGP",
             "OSPF",
             "IPv4",
-            "Static Routing",
+            "Rutas estáticas",
             "Policy Routing",
-            "Route Filtering"
+            "Filtrado de rutas"
         ]
     },
 
@@ -57,7 +57,7 @@ const skills = {
     },
 
     networkServices: {
-        title: "Network Services",
+        title: "Servicios de red",
         items: [
             "NAT",
             "Port Forwarding",
@@ -66,23 +66,23 @@ const skills = {
             "VPN",
             "Firewall",
             "PPPoE",
-            "Hotspot / Captive Portal"
+            "Hotspot / Portal cautivo"
         ]
     },
 
     trafficManagement: {
-        title: "QoS / Traffic Management",
+        title: "QoS / Gestión de tráfico",
         items: [
-            "Queues",
+            "Colas",
             "Queue Tree",
             "Simple Queues",
             "Traffic Shaping",
-            "Bandwidth Management"
+            "Gestión de ancho de banda"
         ]
     },
 
     ispAccess: {
-        title: "ISP / Access",
+        title: "ISP / Acceso",
         items: [
             "FTTH",
             "GPON",
@@ -103,7 +103,7 @@ const skills = {
     },
 
     operatingSystems: {
-        title: "Operating Systems",
+        title: "Sistemas operativos",
         items: [
             "Linux",
             "Windows"
@@ -111,20 +111,20 @@ const skills = {
     },
 
     systemAdministration: {
-        title: "System Administration",
+        title: "Administración de sistemas",
         items: [
             "SSH",
             "Bash",
-            "Server Hardening",
-            "User Management",
-            "Package Management",
-            "Service Management",
-            "Log Management"
+            "Hardening de servidores",
+            "Gestión de usuarios",
+            "Gestión de paquetes",
+            "Gestión de servicios",
+            "Gestión de logs"
         ]
     },
 
     containers: {
-        title: "Containers",
+        title: "Contenedores",
         items: [
             "Docker",
             "Docker Compose"
@@ -132,7 +132,7 @@ const skills = {
     },
 
     webServices: {
-        title: "Web Services",
+        title: "Servicios web",
         items: [
             "NGINX",
             "Apache"
@@ -140,7 +140,7 @@ const skills = {
     },
 
     systemNetworkServices: {
-        title: "Network Services",
+        title: "Servicios de red",
         items: [
             "DNS",
             "Postfix",
@@ -149,7 +149,7 @@ const skills = {
     },
 
     virtualizationStorage: {
-        title: "Virtualization & Storage",
+        title: "Virtualización y almacenamiento",
         items: [
             "Proxmox",
             "Ceph",
@@ -160,7 +160,7 @@ const skills = {
     },
 
     monitoring: {
-        title: "Monitoring Platforms",
+        title: "Plataformas de monitoreo",
         items: [
             "Zabbix",
             "Grafana",
@@ -169,46 +169,46 @@ const skills = {
     },
 
     logManagement: {
-        title: "Log Management",
+        title: "Gestión de logs",
         items: [
             "ELK / Elasticsearch"
         ]
     },
 
     dataCollection: {
-        title: "Data Collection",
+        title: "Recolección de datos",
         items: [
             "SNMP"
         ]
     },
 
     monitoringOperations: {
-        title: "Monitoring Operations",
+        title: "Operación de monitoreo",
         items: [
-            "Network Monitoring",
-            "Server Monitoring",
-            "Alerting",
-            "Incident Detection"
+            "Monitoreo de redes",
+            "Monitoreo de servidores",
+            "Alertas",
+            "Detección de incidentes"
         ]
     },
 
     databasesRelational: {
-        title: "Relational Databases",
+        title: "Bases de datos relacionales",
         items: [
-            "MySQL / MariaDB · Advanced",
-            "SQL Server · Basic"
+            "MySQL / MariaDB · Avanzado",
+            "SQL Server · Básico"
         ]
     },
 
     databasesNoSQL: {
         title: "NoSQL",
         items: [
-            "MongoDB · Basic"
+            "MongoDB · Básico"
         ]
     },
 
     developmentLanguages: {
-        title: "Languages",
+        title: "Lenguajes",
         items: [
             "JavaScript",
             "TypeScript",
@@ -234,23 +234,23 @@ const skills = {
     },
 
     developmentRealtime: {
-        title: "Real-time",
+        title: "Tiempo real",
         items: [
             "WebSockets"
         ]
     },
 
     serverSecurity: {
-        title: "Server Security",
+        title: "Seguridad de servidores",
         items: [
-            "SSH Hardening",
-            "Server Hardening",
+            "Hardening SSH",
+            "Hardening de servidores",
             "SSH 2FA / MFA (TOTP)"
         ]
     },
 
     networkSecurity: {
-        title: "Network Security",
+        title: "Seguridad de red",
         items: [
             "Firewall",
             "VPN"
@@ -261,25 +261,25 @@ const skills = {
 
 const experience = [
     {
-        period: "2025 — PRESENT",
+        period: "2025 — ACTUALIDAD",
         company: "Providers S.A.",
         role: "Encargado del Área de Sistemas",
         description:
             "Responsable de redes e infraestructura de la organización.",
         responsibilities: [
-            "Network & infrastructure management",
-            "Datacenter administration",
-            "Service monitoring",
-            "Technology decisions",
-            "Infrastructure resource management",
-            "Team coordination"
+            "Gestión de redes e infraestructura",
+            "Administración del datacenter",
+            "Monitoreo de servicios",
+            "Toma de decisiones tecnológicas",
+            "Gestión de recursos de infraestructura",
+            "Coordinación de equipos"
         ],
         environment: [
             "Networking",
             "ISP",
             "Linux",
-            "Virtualization",
-            "Monitoring",
+            "Virtualización",
+            "Monitoreo",
             "Datacenter"
         ]
     },
@@ -291,11 +291,11 @@ const experience = [
         description:
             "Responsable de atender incidentes de red y participar en la operación y troubleshooting de la infraestructura.",
         responsibilities: [
-            "Network monitoring",
-            "Incident analysis and troubleshooting",
-            "Router / switch / OLT / ONT configuration",
-            "Field technician support",
-            "Customer network support"
+            "Monitoreo de red",
+            "Análisis de incidentes y troubleshooting",
+            "Configuración de routers, switches, OLT y ONT",
+            "Soporte a técnicos de campo",
+            "Soporte de red a clientes"
         ],
         environment: [
             "Networking",
@@ -313,11 +313,11 @@ const experience = [
         description:
             "Rol inicial orientado a la formación y soporte de redes, con participación en tareas de soporte interno y externo.",
         responsibilities: [
-            "Internal network support",
-            "Field technician support",
-            "Second-level support",
-            "Network monitoring",
-            "Procedure documentation"
+            "Soporte de red interno",
+            "Soporte a técnicos de campo",
+            "Soporte de segundo nivel",
+            "Monitoreo de red",
+            "Documentación de procedimientos"
         ],
         environment: [
             "Networking",
@@ -344,13 +344,13 @@ const projects = [
         description:
             "Juego Snake en JavaScript vanilla usado como base para implementar un pipeline CI/CD completo: tests automatizados, build de imagen Docker y deploy continuo a producción en un VPS propio.",
         details: [
-            "GitHub Actions pipeline (test + deploy)",
-            "Pull requests: tests only · main: full deploy",
-            "Unit tests with node:test, shellcheck, compose validation",
-            "Self-hosted runner on the production VPS",
-            "Least privilege: non-root runner, scoped sudo for deploy",
-            "Healthcheck and post-deploy version verification",
-            "NGINX reverse proxy over Docker network, no exposed ports"
+            "Pipeline en GitHub Actions (test + deploy)",
+            "Pull requests: solo tests · main: deploy completo",
+            "Tests unitarios con node:test, shellcheck y validación del compose",
+            "Runner self-hosted en el VPS de producción",
+            "Mínimo privilegio: runner sin root y sudo acotado al deploy",
+            "Healthcheck y verificación de versión post-deploy",
+            "Reverse proxy NGINX sobre red Docker, sin puertos expuestos"
         ],
         repository: {
             label: "github.com/estebannoblega/app_snake",
@@ -364,7 +364,7 @@ const projects = [
 
     {
         id: "02",
-        name: "MAIL SERVER",
+        name: "SERVIDOR DE CORREO",
         technologies: [
             "Debian",
             "Postfix",
@@ -375,12 +375,12 @@ const projects = [
         description:
             "Diseño, configuración y puesta en producción de un servidor de correo para un dominio propio.",
         details: [
-            "Virtual mailboxes",
+            "Buzones virtuales",
             "Maildir",
             "LMTP",
             "DNS",
             "TLS",
-            "Server hardening"
+            "Hardening del servidor"
         ],
         repository: {
             label: "github.com/estebannoblega/MailServerVPS",
@@ -390,7 +390,7 @@ const projects = [
 
     {
         id: "03",
-        name: "WEBSOCKET APPLICATIONS",
+        name: "APLICACIONES WEBSOCKET",
         technologies: [
             "C",
             "TypeScript",
@@ -412,7 +412,7 @@ const projects = [
 
     {
         id: "04",
-        name: "CAPTIVE PORTAL",
+        name: "PORTAL CAUTIVO",
         technologies: [
             "MikroTik",
             "HTML",
@@ -423,7 +423,7 @@ const projects = [
             "Implementación de un portal cautivo para un servicio de Wi-Fi gratuito, integrado con un formulario externo para recopilación de datos.",
         details: [
             "MikroTik Hotspot",
-            "External captive portal",
+            "Portal cautivo externo",
             "Google Forms",
             "Google Sheets"
         ]
