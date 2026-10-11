@@ -117,7 +117,6 @@ const skills = {
             "Bash",
             "Hardening de servidores",
             "Gestión de usuarios",
-            "Gestión de paquetes",
             "Gestión de servicios",
             "Gestión de logs"
         ]
@@ -168,13 +167,6 @@ const skills = {
         ]
     },
 
-    logManagement: {
-        title: "Gestión de logs",
-        items: [
-            "ELK / Elasticsearch"
-        ]
-    },
-
     dataCollection: {
         title: "Recolección de datos",
         items: [
@@ -200,13 +192,6 @@ const skills = {
         ]
     },
 
-    databasesNoSQL: {
-        title: "NoSQL",
-        items: [
-            "MongoDB · Básico"
-        ]
-    },
-
     developmentLanguages: {
         title: "Lenguajes",
         items: [
@@ -221,15 +206,6 @@ const skills = {
         items: [
             "Node.js",
             "NestJS"
-        ]
-    },
-
-    developmentWeb: {
-        title: "Web",
-        items: [
-            "HTML",
-            "CSS",
-            "JavaScript"
         ]
     },
 
