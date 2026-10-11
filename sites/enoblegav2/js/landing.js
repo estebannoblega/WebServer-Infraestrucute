@@ -121,6 +121,18 @@ function renderProjects() {
     body.innerHTML = projects.map(project => {
         let links = "";
 
+        if (project.demo) {
+            links += `
+                <a
+                    href="${esc(project.demo.url)}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    ▶ ${esc(project.demo.label)}
+                </a>
+            `;
+        }
+
         if (project.repository) {
             links += `
                 <a

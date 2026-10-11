@@ -332,6 +332,38 @@ const experience = [
 const projects = [
     {
         id: "01",
+        name: "SNAKE CI/CD",
+        technologies: [
+            "GitHub Actions",
+            "Docker",
+            "Docker Compose",
+            "NGINX",
+            "Bash",
+            "JavaScript"
+        ],
+        description:
+            "Juego Snake en JavaScript vanilla usado como base para implementar un pipeline CI/CD completo: tests automatizados, build de imagen Docker y deploy continuo a producción en un VPS propio.",
+        details: [
+            "GitHub Actions pipeline (test + deploy)",
+            "Pull requests: tests only · main: full deploy",
+            "Unit tests with node:test, shellcheck, compose validation",
+            "Self-hosted runner on the production VPS",
+            "Least privilege: non-root runner, scoped sudo for deploy",
+            "Healthcheck and post-deploy version verification",
+            "NGINX reverse proxy over Docker network, no exposed ports"
+        ],
+        repository: {
+            label: "github.com/estebannoblega/app_snake",
+            url: "https://github.com/estebannoblega/app_snake"
+        },
+        demo: {
+            label: "snake.enoblega.com.ar",
+            url: "https://snake.enoblega.com.ar/"
+        }
+    },
+
+    {
+        id: "02",
         name: "MAIL SERVER",
         technologies: [
             "Debian",
@@ -357,7 +389,7 @@ const projects = [
     },
 
     {
-        id: "02",
+        id: "03",
         name: "WEBSOCKET APPLICATIONS",
         technologies: [
             "C",
@@ -379,7 +411,7 @@ const projects = [
     },
 
     {
-        id: "03",
+        id: "04",
         name: "CAPTIVE PORTAL",
         technologies: [
             "MikroTik",
@@ -410,6 +442,15 @@ const education = [
 
 
 const courses = [
+    {
+        year: "2026",
+        name: "DevOps, integración y agilidad continua",
+        institution: "Universidad Tecnológica Nacional — Facultad Regional Buenos Aires",
+        duration: "48 horas",
+        type: "Curso",
+        certificate: false
+    },
+
     {
         year: "2026",
         name: "Docker & Kubernetes",

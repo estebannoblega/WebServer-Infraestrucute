@@ -406,6 +406,29 @@ function commandProject(id) {
     }
 
 
+    /* Live demo */
+
+    if (project.demo) {
+        output += `
+            <div class="subsection-title">
+                Live demo
+            </div>
+
+            <div class="repository-item">
+                <span class="list-marker">›</span>
+
+                <a
+                    href="${escapeHtml(project.demo.url)}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    ${escapeHtml(project.demo.label)}
+                </a>
+            </div>
+        `;
+    }
+
+
     output += `
         </article>
     `;
